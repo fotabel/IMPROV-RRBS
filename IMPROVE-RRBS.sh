@@ -35,7 +35,7 @@ bedtools bamtobed -i ${infile%.bam}_R1.bam |
 	cut -f1-6 |
 	bedtools slop -s -i stdin -g $chromsizes -l 0 -r -2 > ${infile%.bam}_blocks.bed
 
-echo "Number of unique msp1 reads:" > $outfile.logs
+echo "Number of unique MspI reads:" > $outfile.logs
 wc -l ${infile%.bam}_blocks.bed >> $outfile.logs
 
 bedtools intersect -s -f 1 -F 1 -a ${infile%.bam}_R1.bam -b ${infile%.bam}_blocks.bed > ${infile%.bam}_msp1.bam 
@@ -46,7 +46,7 @@ rm ${infile%.bam}_blocks.bed ${infile%.bam}_R1.bam
 echo "Blocks have been found"
 
 #logging
-echo "Number of msp1 reads:" >> $outfile.logs
+echo "Number of MspI reads:" >> $outfile.logs
 samtools view -c -F 4 ${infile%.bam}_msp1.bam >> $outfile.logs
 echo "Number of all reads:" >> $outfile.logs
 samtools view -c -F 4 $infile >> $outfile.logs
