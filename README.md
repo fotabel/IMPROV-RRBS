@@ -6,7 +6,7 @@ DNA fragments.
 
 ## Features
 - Detecting whether the input file is single-read or paired-end
-- Logging the "Number of unique MsPI reads", the "Number of MsPI reads" and the "Number of all reads"
+- Logging the "Number of unique MspI reads", the "Number of MspI reads" and the "Number of all reads"
 - Outputting a BAM file without the biased cytosines
 
 ## Installation
