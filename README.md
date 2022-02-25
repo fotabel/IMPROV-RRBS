@@ -1,7 +1,7 @@
 # IMPROVE-RRBS tool Ignores MsPI site and sequencing Read 3’ end OVErlap in RRBS methylation calling
 
 ## Overview
-3’ ends of RRBS reads overlapping with genomic MspI sites includes non-methylated cytosines introduced through end-repair. These cytosines are not recognized by Trim Galore and are therefore not trimmed but considered during methylation calling. To avoid this bias we developed IMPROVE-RRBS, which identifies and hides end-repaired cytosines from methylation calling to avoid methylation bias.
+3’ ends of RRBS reads overlapping with genomic MspI sites include non-methylated cytosines introduced through end-repair. These cytosines are not recognized by Trim Galore and are therefore not trimmed but considered during methylation calling. To avoid this bias we developed IMPROVE-RRBS, which identifies and hides end-repaired cytosines from methylation calling to avoid methylation bias.
 
 ## Features
 - Detecting whether the input file is single-read or paired-end
