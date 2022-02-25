@@ -20,7 +20,7 @@ To run IMPROVE-RRBS the following input parameters are required in this order:
 - outfile: name for the output file
 
 **Example**:
-`./IMPROVE-RRBS.sh infile.bam mm10.chrom.sizes mm10.fa output.bam`
+`./IMPROVE-RRBS.sh test.bam rn6.chrom.sizes rn6.fa output.bam`
 
 ## Dependencies
 - samtools
