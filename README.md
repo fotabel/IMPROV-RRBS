@@ -19,8 +19,8 @@ To run IMPROVE-RRBS the following input parameters are required in this order:
 - genome: path to genome file
 - outfile: name for the output file
 
-**Example**:
-`./IMPROVE-RRBS.sh test.bam rn6.chrom.sizes rn6.fa output.bam
+**Example**:<br />
+`./IMPROVE-RRBS.sh test.bam rn6.chrom.sizes rn6.fa output.bam`<br />
 It should produce the same result as in test.logs.
 
 ## Dependencies
