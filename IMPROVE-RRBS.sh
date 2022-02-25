@@ -36,7 +36,7 @@ bedtools bamtobed -i ${infile%.bam}_R1.bam |
 	bedtools slop -s -i stdin -g $chromsizes -l 0 -r -2 > ${infile%.bam}_blocks.bed
 
 echo "Number of unique MspI reads:" > $outfile.logs
-wc -l ${infile%.bam}_blocks.bed >> $outfile.logs
+cat ${infile%.bam}_blocks.bed | wc -l >> $outfile.logs
 
 bedtools intersect -s -f 1 -F 1 -a ${infile%.bam}_R1.bam -b ${infile%.bam}_blocks.bed > ${infile%.bam}_msp1.bam 
 bedtools subtract -s -f 1 -F 1 -a ${infile%.bam}_R1.bam -b ${infile%.bam}_blocks.bed > ${infile%.bam}_msp1neg.bam
